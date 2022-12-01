@@ -24,7 +24,6 @@ public interface ReportBody {
 	/**
 	 * @return
 	 */
-	String getAsString();
-	void addContent(Object content);
-	void addInfo();
+	Object getAsString();
+
 }

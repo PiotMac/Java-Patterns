@@ -6,8 +6,14 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="builder" />
+        <module name="singleton" />
+        <module name="decorator" />
         <module name="adapter" />
+        <module name="abstractfactory" />
+        <module name="composite" />
+        <module name="builder" />
+        <module name="facade" />
+        <module name="factorymethod" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>

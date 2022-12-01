@@ -17,9 +17,9 @@ package eu.jpereira.trainings.designpatterns.creational.builder;
 
 import java.util.Iterator;
 
-import eu.jpereira.trainings.designpatterns.creational.builder.json.JSONReportBody;
-import eu.jpereira.trainings.designpatterns.creational.builder.model.*;
-import eu.jpereira.trainings.designpatterns.creational.builder.xml.XMLReportBody;
+import eu.jpereira.trainings.designpatterns.creational.builder.model.Report;
+import eu.jpereira.trainings.designpatterns.creational.builder.model.SaleEntry;
+import eu.jpereira.trainings.designpatterns.creational.builder.model.SoldItem;
 
 /**
  * @author jpereira
@@ -34,34 +34,31 @@ public class ReportAssembler {
 	 */
 	public void setSaleEntry(SaleEntry saleEntry) {
 		this.saleEntry = saleEntry;
+
 	}
 
 	/**
 	 * @param type
 	 * @return
 	 */
-	public Report getReport(String type) {
-		Report report;
-		Director reporter = new Director();
+	public Report getReport(ReportBodyBuilder builder) {
+		//Report report = new Report();
 
-		// Algorithms to build the body objects are different
-		if (type.equals("JSON"))
-		{
-			ReportBuilder jsonReportBuilder = new JSONReportBody(this.saleEntry);
-			reporter.setReportBuilder( jsonReportBuilder );
+		Report report = new Report();
+		builder.setCustomerName(saleEntry.getCustomer().getName());
+		builder.setCustomerPhone(saleEntry.getCustomer().getPhone());
+		builder.withItems();
+		Iterator<SoldItem> it = saleEntry.getSoldItems().iterator();
+		while (it.hasNext()) {
+			SoldItem item = it.next();
+			if (!it.hasNext()) {
+				builder.lastItem(item.getName(), item.getQuantity(),item.getUnitPrice());
+			}
+			else {
+				builder.newItem(item.getName(), item.getQuantity(),item.getUnitPrice());
+			}
 		}
-		else if (type.equals("XML"))
-		{
-			ReportBuilder xmlReportBuilder = new XMLReportBody(this.saleEntry);
-			reporter.setReportBuilder( xmlReportBuilder );
-		}
-		else if (type.equals("HTML"))
-		{
-			ReportBuilder htmlReportBuilder = new HTMLReportBody(this.saleEntry);
-			reporter.setReportBuilder( htmlReportBuilder );
-		}
-		reporter.constructReport();
-		report = reporter.getReport();
+		report.setReportBody(builder.getReportBody());
 		return report;
 	}
 }

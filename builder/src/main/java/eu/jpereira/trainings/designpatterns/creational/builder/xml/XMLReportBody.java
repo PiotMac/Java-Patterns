@@ -15,11 +15,7 @@
  */
 package eu.jpereira.trainings.designpatterns.creational.builder.xml;
 
-import eu.jpereira.trainings.designpatterns.creational.builder.model.ReportBuilder;
-import eu.jpereira.trainings.designpatterns.creational.builder.model.SaleEntry;
-import eu.jpereira.trainings.designpatterns.creational.builder.model.SoldItem;
-
-import java.util.Iterator;
+import eu.jpereira.trainings.designpatterns.creational.builder.model.ReportBody;
 
 /**
  * This class is for demonstration purpose only!!
@@ -27,13 +23,9 @@ import java.util.Iterator;
  * @author jpereira
  * 
  */
-public class XMLReportBody extends ReportBuilder {
+public class XMLReportBody implements ReportBody {
 
 	private StringBuilder stringBuilder = new StringBuilder();
-
-	public XMLReportBody(SaleEntry saleEntry) {
-		super(saleEntry);
-	}
 
 	/*
 	 * (non-Javadoc)
@@ -41,35 +33,14 @@ public class XMLReportBody extends ReportBuilder {
 	 * @see eu.jpereira.trainings.designpatterns.creational.builder.ReportBody#
 	 * getAsString()
 	 */
-	public String getAsString() { return stringBuilder.toString(); }
+	@Override
+	public Object getAsString() {
 
-	public void addContent(Object content) {
+		return stringBuilder.toString();
+	}
+
+	public void putContent(Object content) {
 		this.stringBuilder.append(content);
 	}
 
-	@Override
-	public void addInfo() {
-		addContent("<sale><customer><name>");
-		addContent(this.saleEntry.getCustomer().getName());
-		addContent("</name><phone>");
-		addContent(this.saleEntry.getCustomer().getPhone());
-		addContent("</phone></customer>");
-
-		addContent("<items>");
-
-		Iterator<SoldItem> it = saleEntry.getSoldItems().iterator();
-		while ( it.hasNext() ) {
-			SoldItem soldEntry = it.next();
-			addContent("<item><name>");
-			addContent(soldEntry.getName());
-			addContent("</name><quantity>");
-			addContent(soldEntry.getQuantity());
-			addContent("</quantity><price>");
-			addContent(soldEntry.getUnitPrice());
-			addContent("</price></item>");
-		}
-		addContent("</items></sale>");
-		String info = getAsString();
-		report.setInfo(info);
-	}
 }

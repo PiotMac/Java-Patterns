@@ -6,6 +6,12 @@
       <list>
         <option value="$PROJECT_DIR$/adapter/pom.xml" />
         <option value="$PROJECT_DIR$/builder/pom.xml" />
+        <option value="$PROJECT_DIR$/singleton/pom.xml" />
+        <option value="$PROJECT_DIR$/factorymethod/pom.xml" />
+        <option value="$PROJECT_DIR$/abstractfactory/pom.xml" />
+        <option value="$PROJECT_DIR$/composite/pom.xml" />
+        <option value="$PROJECT_DIR$/decorator/pom.xml" />
+        <option value="$PROJECT_DIR$/facade/pom.xml" />
       </list>
     </option>
   </component>

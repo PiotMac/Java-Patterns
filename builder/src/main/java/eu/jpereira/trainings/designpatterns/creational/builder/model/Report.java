@@ -22,18 +22,22 @@ package eu.jpereira.trainings.designpatterns.creational.builder.model;
  */
 public class Report {
 
-	//private ReportBody reportBody;
-	private String info;
+	private ReportBody reportBody;
 
 	/**
 	 * @param reportBody
 	 */
-	//public void setReportBody(ReportBody reportBody) { this.reportBody = reportBody; }
-	public void setInfo(String info) { this.info = info; }
+	public void setReportBody(ReportBody reportBody) {
+		this.reportBody = reportBody;
+		
+	}
 
 	/**
 	 * @return
 	 */
-	//public Object getAsString() { return this.reportBody.getAsString(); }
-	public String getAsString() { return this.info; }
+	public Object getAsString() {
+		
+		return this.reportBody.getAsString();
+	}
+
 }
