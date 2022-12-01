@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite tests="3" failures="1" name="eu.jpereira.trainings.designpatterns.creational.singleton.ReportBuilderTest" time="1.864" errors="0" skipped="0">
+  <properties>
+    <property name="idea.version" value="2022.2.3"/>
+    <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
+    <property name="java.vm.version" value="17.0.5+8-Ubuntu-2ubuntu120.04"/>
+    <property name="sun.boot.library.path" value="/usr/lib/jvm/java-17-openjdk-amd64/lib"/>
+    <property name="maven.multiModuleProjectDirectory" value="/home/szysio/IdeaProjects/Lista3/singleton"/>
+    <property name="java.vm.vendor" value="Private Build"/>
+    <property name="java.vendor.url" value="Unknown"/>
+    <property name="guice.disable.misplaced.annotation.check" value="true"/>
+    <property name="path.separator" value=":"/>
+    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
+    <property name="user.country" value="PL"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="user.dir" value="/home/szysio/IdeaProjects/Lista3/singleton"/>
+    <property name="java.vm.compressedOopsMode" value="32-bit"/>
+    <property name="java.runtime.version" value="17.0.5+8-Ubuntu-2ubuntu120.04"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.io.tmpdir" value="/tmp"/>
+    <property name="line.separator" value="
+"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="os.name" value="Linux"/>
+    <property name="maven.ext.class.path" value="/home/szysio/Pulpit/idea-IU-222.4345.14/plugins/maven/lib/maven-event-listener.jar"/>
+    <property name="classworlds.conf" value="/home/szysio/Pulpit/idea-IU-222.4345.14/plugins/maven/lib/maven3/bin/m2.conf"/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="java.library.path" value="/usr/java/packages/lib:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib"/>
+    <property name="maven.conf" value="/home/szysio/Pulpit/idea-IU-222.4345.14/plugins/maven/lib/maven3/conf"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="java.class.version" value="61.0"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="os.version" value="5.15.0-53-generic"/>
+    <property name="user.home" value="/home/szysio"/>
+    <property name="user.timezone" value="Europe/Warsaw"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.specification.version" value="17"/>
+    <property name="user.name" value="szysio"/>
+    <property name="java.class.path" value="/home/szysio/Pulpit/idea-IU-222.4345.14/plugins/maven/lib/maven3/boot/plexus-classworlds.license:/home/szysio/Pulpit/idea-IU-222.4345.14/plugins/maven/lib/maven3/boot/plexus-classworlds-2.6.0.jar"/>
+    <property name="java.vm.specification.version" value="17"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="sun.java.command" value="org.codehaus.classworlds.Launcher -Didea.version=2022.2.3 test"/>
+    <property name="java.home" value="/usr/lib/jvm/java-17-openjdk-amd64"/>
+    <property name="user.language" value="pl"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="java.version" value="17.0.5"/>
+    <property name="native.encoding" value="UTF-8"/>
+    <property name="securerandom.source" value="file:/dev/./urandom"/>
+    <property name="java.vendor" value="Private Build"/>
+    <property name="maven.home" value="/home/szysio/Pulpit/idea-IU-222.4345.14/plugins/maven/lib/maven3"/>
+    <property name="file.separator" value="/"/>
+    <property name="java.version.date" value="2022-10-18"/>
+    <property name="java.vendor.url.bug" value="Unknown"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="sun.cpu.endian" value="little"/>
+  </properties>
+  <testcase classname="eu.jpereira.trainings.designpatterns.creational.singleton.ReportBuilderTest" name="testGetSingleton" time="1.097"/>
+  <testcase classname="eu.jpereira.trainings.designpatterns.creational.singleton.ReportBuilderTest" name="measureInitializeTime" time="0.263"/>
+  <testcase classname="eu.jpereira.trainings.designpatterns.creational.singleton.ReportBuilderTest" name="testMultiThreading" time="0.504">
+    <failure message="expected:&lt;eu.jpereira.trainings.designpatterns.creational.singleton.ReportBuilder@309dc015&gt; but was:&lt;eu.jpereira.trainings.designpatterns.creational.singleton.ReportBuilder@19d9d1f6&gt;" type="java.lang.AssertionError">java.lang.AssertionError: expected:&lt;eu.jpereira.trainings.designpatterns.creational.singleton.ReportBuilder@309dc015&gt; but was:&lt;eu.jpereira.trainings.designpatterns.creational.singleton.ReportBuilder@19d9d1f6&gt;
+	at org.junit.Assert.fail(Assert.java:93)
+	at org.junit.Assert.failNotEquals(Assert.java:647)
+	at org.junit.Assert.assertEquals(Assert.java:128)
+	at org.junit.Assert.assertEquals(Assert.java:147)
+	at eu.jpereira.trainings.designpatterns.creational.singleton.ReportBuilderTest.testMultiThreading(ReportBuilderTest.java:72)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:44)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:15)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:41)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:20)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:28)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:263)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:69)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:48)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:231)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:60)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:50)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:222)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:292)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+</failure>
+    <system-out>Getting instance for Thread 14
+Instance is null for Thread 14
+Getting instance for Thread 15
+Instance is null for Thread 15
+Getting instance for Thread 16
+Instance is null for Thread 16
+Getting instance for Thread 17
+Getting instance for Thread 18
+Instance is null for Thread 18
+Instance is null for Thread 17
+Getting instance for Thread 19
+Instance is null for Thread 19
+Getting instance for Thread 20
+Instance is null for Thread 20
+Getting instance for Thread 21
+Instance is null for Thread 21
+Getting instance for Thread 22
+Instance is null for Thread 22
+Getting instance for Thread 23
+Instance is null for Thread 23
+Returing 815644693 instance to Thread 14
+Thread 14 died!
+Returing 433705462 instance to Thread 16
+Returing 1426707979 instance to Thread 17
+Returing 2059041130 instance to Thread 19
+Returing 2109337884 instance to Thread 22
+Returing 1004203613 instance to Thread 15
+Thread 15 died!
+Thread 16 died!
+Thread 17 died!
+Returing 1948906822 instance to Thread 23
+Returing 904125647 instance to Thread 21
+Returing 511666392 instance to Thread 18
+Thread 18 died!
+Thread 19 died!
+Returing 810061546 instance to Thread 20
+Thread 20 died!
+Thread 21 died!
+Thread 22 died!
+Thread 23 died!
+</system-out>
+  </testcase>
+</testsuite>
